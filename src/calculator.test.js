@@ -1,73 +1,73 @@
-const calculator = require("./calculator");
+const { add, subtract, multiply, divide } = require("./calculator");
 
 test("adds two number", () => {
-  expects(add(2, 3)).toBe(5);
+  expect(add(2, 3)).toBe(5);
 });
 
 test("works with zero", () => {
-  expects(add(2, 0)).toBe(2);
+  expect(add(2, 0)).toBe(2);
 });
 
 test("works with zero", () => {
-  expects(add(0, 0)).toBe(0);
+  expect(add(0, 0)).toBe(0);
 });
 
 test("works with zero", () => {
-  expects(add(0, 2)).toBe(2);
+  expect(add(0, 2)).toBe(2);
 });
 
 test("works with negative number", () => {
-  expects(add(2, -10)).toBe(-8);
+  expect(add(2, -10)).toBe(-8);
 });
 
 test("works with zero", () => {
-  expects(add(-2, -6)).toBe(-8);
+  expect(add(-2, -6)).toBe(-8);
 });
 
 test("subtract two numbers", () => {
-  expects(subtract(3, 2)).toBe(1);
+  expect(subtract(3, 2)).toBe(1);
 });
 
 test("works with smaller number", () => {
-  expects(subtract(3, 12)).toBe(-9);
+  expect(subtract(3, 12)).toBe(-9);
 });
 
 test("works with zero", () => {
-  expects(subtract(0, 2)).toBe(-2);
+  expect(subtract(0, 2)).toBe(-2);
 });
 
 test("works with two negative numbers", () => {
-  expects(subtract(-3, -2)).toBe(-5);
+  expect(subtract(-3, -2)).toBe(-1);
 });
 
 test("multiply two numbers", () => {
-  expects(multiply(3, 2)).toBe(6);
+  expect(multiply(3, 2)).toBe(6);
 });
 
 test("works with zero", () => {
-  expects(multiply(3, 0)).toBe(0);
+  expect(multiply(3, 0)).toBe(0);
 });
 
 test("works with negative number", () => {
-  expects(multiply(3, -2)).toBe(-6);
+  expect(multiply(3, -2)).toBe(-6);
 });
 
 test("works with both negative numbers", () => {
-  expects(multiply(-3, -2)).toBe(6);
+  expect(multiply(-3, -2)).toBe(6);
 });
 
 test("divide two numbers", () => {
-  expects(divide(3, 2)).toBe(1.5);
+  expect(divide(3, 2)).toBe(1.5);
 });
 
 test("divide two numbers", () => {
-  expects(divide(5, 12)).toBe(0);
+  expect(divide(5, 12)).toBeCloseTo(0.415);
 });
 
 test("divide bye zero error", () => {
-  expects(divide(3, 0)).toBe("Divied by zero");
+  expect(divide(3, 0)).toBe("Divided by zero");
 });
 
 test("divide ", () => {
-  expects(divide(0, 2)).toBe(0);
+  expect(divide(0, 2)).toBe(0);
 });
